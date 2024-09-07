@@ -1,0 +1,14 @@
+const yesBtn = document.getElementById('yes-btn');
+const noBtn = document.getElementById('no-btn');
+const resultDiv = document.getElementById('result');
+
+yesBtn.addEventListener('click', () => {
+	resultDiv.innerHTML = 'You did it! You confessed your love!';
+});
+
+noBtn.addEventListener('click', () => {
+	setTimeout(() => {
+		resultDiv.innerHTML = 'Wait, what? You meant to say YES!';
+	}, 1000);
+	yesBtn.click(); // simulate a click on the yes button
+});
